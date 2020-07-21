@@ -3,7 +3,7 @@ import item
 
 def update_quality(self):
     for item in self.items:
-        if item.name != "Aged Brie" and item.name != "Backstage passes " and item.quality > 0 and item.name != "Sulfuras, Hand of Ragnaros":
+        if item.name == "Conjured" and item.name != "Aged Brie" and item.name != "Backstage passes " and item.quality > 0 and item.name != "Sulfuras, Hand of Ragnaros":
             item.quality = item.quality - 2
         else:
             if item.quality < 50:

@@ -2,18 +2,7 @@ from tkinter import *
 from item import Item
 
 
-class GildedRose(object):
-
-    def __init__(self, items):
-        self.items = items
-
-
 window = Tk()
-
-
-window.title("Welcome to LikeGeeks app")
-
-window.geometry('350x200')
 
 
 def buttonSimualte():
@@ -28,6 +17,11 @@ def buttonSimualte():
 
     for item in tmp:
         listbox.insert(END, item)
+
+
+window.title("Welcome to LikeGeeks app")
+
+window.geometry('350x200')
 
 
 def buttonAdd():
@@ -76,6 +70,8 @@ listbox.pack()
 item = Item("item1", 10, 5)
 tmp = item.__seed__()
 
+for item in tmp:
+    listbox.insert(END, item)
 
 btnSimulate = Button(window, text="Simulate", command=buttonSimualte)
 btnAdd = Button(window, text="Add", command=buttonAdd)
